@@ -7,8 +7,8 @@ create table employee_payroll(
     salary INT,
     start_date DATE NOT NULL);
     
-insert into employee_payroll(name,salary,start_date) values("Avani",5000,"2021-04-19");
-insert into employee_payroll(name,salary,start_date) values("Bill",1000,"2011-11-21");
+insert into employee_payroll(name,salary,start_date) values("Jane",1000,"2022-04-19");
+insert into employee_payroll(name,salary,start_date) values("Eddie",3000,"2021-11-21");
 
 select * from employee_payroll;
 
@@ -17,4 +17,10 @@ SELECT * FROM employee_payroll where start_date BETWEEN CAST("2011-04-01" AS DAT
 
 ALTER TABLE employee_payroll add column gender varchar(1);
 UPDATE employee_payroll set gender = "M"
-		where id = 1;
+		where id = 4;
+        
+SELECT SUM(salary) from employee_payroll where gender = "F" group by gender;
+SELECT AVG(salary) from employee_payroll where gender = "F" group by gender;
+SELECT MIN(salary) from employee_payroll where gender = "F" group by gender;
+SELECT MAX(salary) from employee_payroll where gender = "F" group by gender;
+SELECT COUNT(salary) from employee_payroll where gender = "F" group by gender;
