@@ -8,4 +8,4 @@ create table employee_payroll(
     salary INT,
     start_date DATE NOT NULL);
     
-SELECT * FROM employee_payroll;
+insert into employee_payroll(name,salary,start_date) values("Avani",5000,"2021-04-19");
