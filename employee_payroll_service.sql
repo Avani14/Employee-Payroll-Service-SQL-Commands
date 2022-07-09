@@ -28,3 +28,8 @@ SELECT COUNT(salary) from employee_payroll where gender = "F" group by gender;
 ALTER TABLE employee_payroll add column Basic_Pay int, add column
 Deductions int,add column Taxable_Pay int,add column
 Income_Tax int,add column Net_Pay int;
+
+insert into employee_payroll(name,salary,start_date,gender,phone,address,department,Basic_Pay,Deductions,Taxable_Pay,Income_Tax,Net_Pay) values("Terrisa",3000,"2021-11-21",'F',98765432,"Indore",'Sales',3000,100,1000,200,1700);
+insert into employee_payroll(name,salary,start_date,gender,phone,address,department,Basic_Pay,Deductions,Taxable_Pay,Income_Tax,Net_Pay) values("Terrisa",3000,"2021-11-21",'F',98765432,"Indore",'Marketing',3000,100,1000,200,1700);
+
+SELECT * FROM employee_payroll WHERE NAME = "Terrisa";
