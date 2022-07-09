@@ -32,4 +32,20 @@ Income_Tax int,add column Net_Pay int;
 insert into employee_payroll(name,salary,start_date,gender,phone,address,department,Basic_Pay,Deductions,Taxable_Pay,Income_Tax,Net_Pay) values("Terrisa",3000,"2021-11-21",'F',98765432,"Indore",'Sales',3000,100,1000,200,1700);
 insert into employee_payroll(name,salary,start_date,gender,phone,address,department,Basic_Pay,Deductions,Taxable_Pay,Income_Tax,Net_Pay) values("Terrisa",3000,"2021-11-21",'F',98765432,"Indore",'Marketing',3000,100,1000,200,1700);
 
-SELECT * FROM employee_payroll WHERE NAME = "Terrisa";
+SELECT * FROM employee_payroll WHERE NAME = "Avani";
+
+create table employee_pay(emp_id int,Basic_Pay int,
+Deductions int,Taxable_Pay int,
+Income_Tax int,Net_Pay int);
+
+create table employee_details(emp_id int,name varchar(50),emp_gender char(1),emp_phone long,emp_address varchar(50));
+create table employee_department_details(emp_id int, emp_salar int,emp_department varchar(50));
+alter table employee_department_details add column emp_start_date date;
+insert into employee_details values(1,"Avani",'F',9516944147,'Indore');
+select * from employee_pay;
+
+alter table employee_department_details modify column emp_id int primary key auto_increment;
+desc employee_payroll;
+insert into employee_department_details values(1,5000,"FullStack","2021-04-19");
+insert into employee_pay values(1,5000,100,100,200,4600)
+;
